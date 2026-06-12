@@ -2,59 +2,154 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>E‑Portafolio de Evaluación del Aprendizaje</title>
+<title>E‑Portafolio – Evaluación en Fundamentos del Desarrollo de Videojuegos</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #003366; color: white; padding: 20px; text-align: center; }
-    nav { background: #005599; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 30px; background: white; margin: 20px auto; width: 90%; max-width: 900px; border-radius: 8px; }
-    h2 { color: #003366; }
-    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-    table, th, td { border: 1px solid #999; }
-    th, td { padding: 10px; text-align: left; }
-    th { background: #e0e0e0; }
-    footer { text-align: center; padding: 20px; background: #003366; color: white; margin-top: 40px; }
+    body { 
+        font-family: Arial, sans-serif; 
+        margin: 0; 
+        padding: 0; 
+        background: #0d0d0d; 
+        color: #f2f2f2;
+    }
+
+    header {
+        background: linear-gradient(135deg, #111, #222, #111);
+        padding: 40px;
+        text-align: center;
+        color: #00eaff;
+        text-shadow: 0 0 10px #00eaff;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background: #1a1a1a;
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid #00eaff;
+    }
+
+    nav button {
+        background: #00eaff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #000;
+        transition: 0.3s;
+    }
+
+    nav button:hover {
+        background: #0088aa;
+        color: white;
+    }
+
+    section {
+        display: none;
+        padding: 30px;
+        background: #1a1a1a;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 900px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    }
+
+    section.active {
+        display: block;
+    }
+
+    h2 {
+        color: #00eaff;
+        text-shadow: 0 0 5px #00eaff;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+        margin: 15px 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background: #111;
+    }
+
+    table, th, td {
+        border: 1px solid #444;
+    }
+
+    th {
+        background: #00eaff;
+        color: #000;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #111;
+        color: #00eaff;
+        margin-top: 40px;
+    }
 </style>
+
+<script>
+function mostrarSeccion(id) {
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
 </head>
 
 <body>
 
 <header>
-    <h1>E‑Portafolio de Evaluación del Aprendizaje</h1>
-    <p>Diplomado de Formación Docente en Educación Virtual – UJGH</p>
+    <h1>E‑Portafolio de Evaluación</h1>
+    <p>Fundamentos del Desarrollo de Videojuegos</p>
 </header>
 
 <nav>
-    <a href="#presentacion">Presentación</a>
-    <a href="#instrumentos">Instrumentos</a>
-    <a href="#mediacion">Filosofía de Mediación</a>
-    <a href="#referencias">Referencias</a>
+    <button onclick="mostrarSeccion('presentacion')">Presentación</button>
+    <button onclick="mostrarSeccion('instrumentos')">Instrumentos</button>
+    <button onclick="mostrarSeccion('mediacion')">Mediación</button>
+    <button onclick="mostrarSeccion('referencias')">Referencias</button>
 </nav>
 
 <!-- ============================
      SECCIÓN 1: PRESENTACIÓN
 =============================== -->
-<section id="presentacion">
+<section id="presentacion" class="active">
     <h2>1. Presentación del Docente</h2>
+
+    <img src="https://i.imgur.com/9YjvZcF.jpeg" alt="Desarrollo de videojuegos">
+
     <p><strong>Docente:</strong> Ing. Daniel León Bracamonte</p>
-    <p><strong>Asignatura:</strong> Diseño Instruccional en Entornos Virtuales</p>
-    <p><strong>Unidad temática seleccionada:</strong> Diseño de Actividades de Aprendizaje en EVA</p>
+    <p><strong>Asignatura:</strong> Fundamentos del Desarrollo de Videojuegos</p>
+    <p><strong>Unidad temática:</strong> Evaluación del aprendizaje en proyectos de videojuegos</p>
 
     <h3>Justificación Didáctica</h3>
     <p>
-        Este e‑portafolio se construye como un contenedor digital que evidencia la arquitectura metodológica 
-        de la unidad dedicada al diseño de actividades de aprendizaje en entornos virtuales. Su propósito es 
-        integrar instrumentos de evaluación formativa y auténtica que permitan valorar el desarrollo de 
-        competencias digitales, pensamiento crítico y autonomía del estudiante.
+        Este e‑portafolio presenta los instrumentos y estrategias de evaluación aplicados en la asignatura, 
+        orientados al desarrollo de competencias en diseño, programación y análisis de videojuegos.
     </p>
 
     <h3>Objetivo de Aprendizaje</h3>
     <p>
-        Al finalizar la unidad, el estudiante será capaz de diseñar actividades de aprendizaje coherentes con 
-        los principios del diseño instruccional, integrando recursos digitales y criterios de evaluación 
-        socioformativos, en concordancia con la coherencia curricular planteada por Bautista et al. (2006).
+        El estudiante será capaz de diseñar, implementar y evaluar prototipos de videojuegos aplicando 
+        principios de jugabilidad, narrativa interactiva y programación básica.
     </p>
 </section>
 
@@ -64,57 +159,52 @@
 <section id="instrumentos">
     <h2>2. Instrumentos de Evaluación</h2>
 
-    <h3>2.1 Rúbrica Analítica Socioformativa (Tobón, 2007)</h3>
-    <p><strong>Actividad evaluada:</strong> Diseño de una actividad de aprendizaje para un EVA.</p>
+    <img src="https://i.imgur.com/1pQ0p0C.jpeg" alt="Evaluación en videojuegos">
+
+    <h3>2.1 Rúbrica Analítica para Prototipos de Videojuegos</h3>
 
     <table>
         <tr>
             <th>Criterio</th>
-            <th>Estratégico</th>
-            <th>Autónomo</th>
-            <th>Resolutivo</th>
-            <th>Receptivo</th>
-            <th>Preformal</th>
+            <th>Excelente</th>
+            <th>Bueno</th>
+            <th>Básico</th>
+            <th>Insuficiente</th>
         </tr>
 
         <tr>
-            <td><strong>1. Pertinencia pedagógica</strong></td>
-            <td>Integra saberes y propone innovaciones aplicables a diversos contextos educativos.</td>
-            <td>Justifica con claridad sus decisiones didácticas y selecciona recursos adecuados.</td>
-            <td>Resuelve la actividad con criterios básicos y selección funcional de recursos.</td>
-            <td>Realiza la actividad siguiendo instrucciones sin justificar decisiones.</td>
-            <td>Presenta ideas vagas y requiere acompañamiento total.</td>
+            <td><strong>Jugabilidad</strong></td>
+            <td>Mecánicas pulidas, balanceadas y divertidas.</td>
+            <td>Mecánicas funcionales con pequeños detalles por mejorar.</td>
+            <td>Jugabilidad limitada pero operativa.</td>
+            <td>No se logra una experiencia jugable coherente.</td>
         </tr>
 
         <tr>
-            <td><strong>2. Diseño instruccional</strong></td>
-            <td>Genera una secuencia didáctica creativa, coherente y adaptable.</td>
-            <td>Organiza actividades con lógica pedagógica y autonomía.</td>
-            <td>Presenta una estructura básica con algunos elementos coherentes.</td>
-            <td>Incluye actividades sin relación clara entre sí.</td>
-            <td>No logra estructurar la secuencia.</td>
+            <td><strong>Arte y estética</strong></td>
+            <td>Estilo visual consistente y atractivo.</td>
+            <td>Elementos visuales adecuados.</td>
+            <td>Gráficos básicos sin cohesión.</td>
+            <td>Arte deficiente o ausente.</td>
         </tr>
 
         <tr>
-            <td><strong>3. Integración tecnológica</strong></td>
-            <td>Selecciona herramientas digitales innovadoras y justificadas pedagógicamente.</td>
-            <td>Integra recursos digitales pertinentes y funcionales.</td>
-            <td>Utiliza herramientas básicas de manera operativa.</td>
-            <td>Emplea recursos digitales sin criterio pedagógico.</td>
-            <td>No integra herramientas digitales.</td>
+            <td><strong>Programación</strong></td>
+            <td>Código limpio, modular y sin errores.</td>
+            <td>Código funcional con pocos errores.</td>
+            <td>Errores menores que afectan la experiencia.</td>
+            <td>El prototipo no funciona.</td>
         </tr>
     </table>
 
-    <h3>2.2 Instrumento de Autoevaluación (Metacognición)</h3>
-    <p><strong>Instrucciones:</strong> Responde cada ítem con sinceridad usando la escala:  
-    1 = Nunca, 2 = A veces, 3 = Frecuentemente, 4 = Siempre.</p>
+    <h3>2.2 Autoevaluación del Estudiante</h3>
 
     <table>
         <tr><th>Ítem</th><th>Respuesta</th></tr>
-        <tr><td>1. Reflexioné sobre mis decisiones al diseñar la actividad.</td><td>____</td></tr>
-        <tr><td>2. Identifiqué mis fortalezas y debilidades durante el proceso.</td><td>____</td></tr>
-        <tr><td>3. Apliqué estrategias para mejorar mi desempeño.</td><td>____</td></tr>
-        <tr><td>4. Solicité y utilicé retroalimentación de mis compañeros.</td><td>____</td></tr>
+        <tr><td>1. Evalué críticamente mi prototipo.</td><td>____</td></tr>
+        <tr><td>2. Identifiqué errores en mi código.</td><td>____</td></tr>
+        <tr><td>3. Mejoré la jugabilidad tras pruebas.</td><td>____</td></tr>
+        <tr><td>4. Apliqué retroalimentación del docente.</td><td>____</td></tr>
     </table>
 </section>
 
@@ -122,31 +212,23 @@
      SECCIÓN 3: MEDIACIÓN
 =============================== -->
 <section id="mediacion">
-    <h2>3. Filosofía de Mediación: Plan de Feedback y Feedforward</h2>
+    <h2>3. Filosofía de Mediación</h2>
+
+    <img src="https://i.imgur.com/8iQ7s8p.jpeg" alt="Feedback en videojuegos">
 
     <p>
-        El proceso de retroalimentación se fundamenta en Alonso y Blázquez (2012), quienes destacan la 
-        importancia de una mediación humana, continua y orientada al desarrollo de competencias. El plan 
-        contempla tres momentos clave:
+        La retroalimentación en esta asignatura se basa en ciclos iterativos de prueba, error y mejora, 
+        similares al proceso real de desarrollo de videojuegos.
     </p>
 
     <h3>1. Feedback inmediato</h3>
-    <p>
-        Se ofrecerán comentarios cualitativos personalizados en cada entrega parcial, destacando logros y 
-        señalando oportunidades de mejora con un lenguaje respetuoso y orientado al crecimiento.
-    </p>
+    <p>Correcciones directas sobre código, mecánicas y diseño visual.</p>
 
     <h3>2. Feedforward</h3>
-    <p>
-        Antes de la entrega final, se brindarán orientaciones específicas para mejorar el producto, 
-        promoviendo la autorregulación y la toma de decisiones informadas.
-    </p>
+    <p>Orientaciones para mejorar futuras versiones del prototipo.</p>
 
     <h3>3. Acompañamiento continuo</h3>
-    <p>
-        Se habilitarán espacios sincrónicos y asincrónicos para resolver dudas, promover la coevaluación y 
-        fortalecer la comunidad de aprendizaje.
-    </p>
+    <p>Sesiones de prueba, revisión de código y análisis de jugabilidad.</p>
 </section>
 
 <!-- ============================
@@ -154,16 +236,16 @@
 =============================== -->
 <section id="referencias">
     <h2>4. Referencias Bibliográficas</h2>
-    <p>Bautista, G., Borges, F., & Forés, A. (2006). <em>Didáctica universitaria en entornos virtuales de enseñanza-aprendizaje</em>. Narcea.</p>
-    <p>Gros, B. (2011). <em>El aprendizaje colaborativo en entornos virtuales</em>. UOC.</p>
-    <p>Quijada, R. (2014). Metacognición y aprendizaje autónomo en educación virtual. <em>Revista de Investigación Educativa</em>.</p>
-    <p>Tobón, S. (2007). <em>Formación basada en competencias</em>. ECOE.</p>
-    <p>Alonso, L., & Blázquez, F. (2012). <em>La retroalimentación en procesos formativos virtuales</em>. UNED.</p>
-    <p>Ricardo, C. (2017). Principios de ergonomía visual en entornos digitales. <em>Revista Tecnología y Educación</em>.</p>
+
+    <img src="https://i.imgur.com/2xJ0b8k.jpeg" alt="Libros de videojuegos">
+
+    <p>Fullerton, T. (2019). *Game Design Workshop*. CRC Press.</p>
+    <p>Schell, J. (2020). *The Art of Game Design*. A K Peters.</p>
+    <p>Rollings, A., & Adams, E. (2003). *On Game Design*. New Riders.</p>
 </section>
 
 <footer>
-    <p>E‑Portafolio desarrollado para el Diplomado de Formación Docente en Educación Virtual – UJGH - Ing. Daniel León Bracamonte</p>
+    <p>E‑Portafolio desarrollado por Ing. Daniel León Bracamonte</p>
 </footer>
 
 </body>
